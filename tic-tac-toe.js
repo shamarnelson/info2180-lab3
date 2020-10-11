@@ -7,8 +7,9 @@ window.onload = () => {
     let isX = true;
     let button = document.querySelector(".btn");
     let status = document.getElementById("status");
+    let status= document.getElementById(“status”).className = “you-won”
     let statusIntialText = status.innerHTML;
-    let g = Array(9).fill(0);
+    let game = Array(9).fill(0);
     n.forEach((i, r) => {
       i.classList.add("square");
   
@@ -95,7 +96,7 @@ window.onload = () => {
         }
       });
     });
-  
+    
     button.addEventListener("click", () => {
       a.forEach((e) => {
         e.innerHTML = "";
