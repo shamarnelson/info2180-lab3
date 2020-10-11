@@ -4,7 +4,8 @@ window.onload=()=>{
     let n = document.querySelectorAll("div#board div");
     let isX= true;
 
-    i.addEventListener("click",()=>{
+    //ex2
+    i.addEventListener("userclick",()=>{
         if( game[n]=== 0 ){
             if(isX === true){
                 i.classList.add("X")
@@ -21,6 +22,15 @@ window.onload=()=>{
                 game[n]="O";
             }
         }
+
+        //Ex3
+        i.addEventListener("mouover",()=>{
+            i.classList.add("hover")
+        })
+
+        i.addEventListener("mouleave",()=>{
+            i.classList.remover("hover")
+        })
 
 
         /*  console.log(game);
