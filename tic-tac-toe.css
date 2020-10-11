@@ -19,7 +19,9 @@ body {
   justify-content: center;
   align-items: center;
   color: var(--black);
+  
 }
+
 
 h1 {
   color: var(--lighterBlue);
