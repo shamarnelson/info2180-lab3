@@ -6,7 +6,7 @@ window.onload = () => {
     let n = document.querySelectorAll("div#board div");
     let isX = true;
     let button = document.querySelector(".btn");
-    let status = document.getElementById("status").className = “you-won”;
+    let status = document.getElementById("status");
     let statusIntialText = status.textContent;
     let game = Array(9).fill(0);
     n.forEach((i, r) => {
@@ -103,11 +103,12 @@ window.onload = () => {
         e.textContent = "";
         g = Array(9).fill(0);
         status.textContent = statusIntialText;
+        document.querySelectorAll(".btn").forEach(button=>button.textContent="")
       });
     });
 
-    restartgame.addEventListener("click", ()=> {
+    /*restartgame.addEventListener("click", ()=> {
         status.textContent=statusIntialText;
         document.querySelectorAll(".btn").forEach(button=>button.textContent="");
-    });
+    });*/
   };
