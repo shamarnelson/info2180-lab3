@@ -7,8 +7,8 @@ window.onload = () => {
     let isX = true;
     let button = document.querySelector(".btn");
     let status = document.getElementById("status");
-    let status= document.getElementById(“status”).className = “you-won”
-    let statusIntialText = status.innerHTML;
+    //document.getElementById(“status”).className = “you-won”
+    let statusIntialText = status.textContent;
     let game = Array(9).fill(0);
     n.forEach((i, r) => {
       i.classList.add("square");
@@ -18,12 +18,12 @@ window.onload = () => {
         if (game[r] === 0) {
           if (isX === true) {
             i.classList.add("X");
-            i.innerHTML = "X";
+            i.textContent = "X";
             isX = false;
             game[r] = "X";
           } else {
             i.classList.add("O");
-            i.innerHTML = "O";
+            i.textContent = "O";
             isX = true;
   
             game[r] = "O";
@@ -92,14 +92,14 @@ window.onload = () => {
         }
   
         if (result != "") {
-          status.innerHTML = result;
+          status.textContent = result;
         }
       });
     });
     
     button.addEventListener("click", () => {
       a.forEach((e) => {
-        e.innerHTML = "";
+        e.textContent = "";
         g = Array(9).fill(0);
         status.innerHTML = statusIntialText;
       });
