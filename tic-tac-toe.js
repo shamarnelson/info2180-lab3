@@ -6,8 +6,7 @@ window.onload = () => {
     let n = document.querySelectorAll("div#board div");
     let isX = true;
     let button = document.querySelector(".btn");
-    let status = document.getElementById("status");
-    //document.getElementById(“status”).className = “you-won”
+    let status = document.getElementById("status").className = “you-won”;
     let statusIntialText = status.textContent;
     let game = Array(9).fill(0);
     n.forEach((i, r) => {
@@ -34,6 +33,8 @@ window.onload = () => {
         i.addEventListener("mouover", () => {
           i.classList.add("hover");
         });
+
+        
   
         i.addEventListener("mouleave", () => {
           i.classList.remover("hover");
@@ -101,7 +102,12 @@ window.onload = () => {
       a.forEach((e) => {
         e.textContent = "";
         g = Array(9).fill(0);
-        status.innerHTML = statusIntialText;
+        status.textContent = statusIntialText;
       });
+    });
+
+    restartgame.addEventListener("click", ()=> {
+        status.textContent=statusIntialText;
+        document.querySelectorAll(".btn").forEach(button=>button.textContent="");
     });
   };
